@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.shortcuts import render
 from .forms import getintouch_form
 
@@ -8,6 +9,7 @@ def getintouch_function(request):
         form = getintouch_form(request.POST)
         if form.is_valid():
             form.save()
+            messages.success(request, 'Thanks for contacting us. We will reply you shortly.')
                 
     else:
         form = getintouch_form()
