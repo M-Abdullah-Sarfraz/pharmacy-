@@ -4,5 +4,5 @@ from .models import signp_model
 
 class Signup_form(forms.ModelForm):
     class Meta:
-        models = signp_model
+        model = signp_model
         fields = '__all__'

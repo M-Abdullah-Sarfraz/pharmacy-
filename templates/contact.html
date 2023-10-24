@@ -58,10 +58,31 @@
       form button[type="submit"]:hover {
         background-color: #0056b3;
       }
+      .contact-paragraph {
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 20px 0;
+        color: #333;
+        padding: 20px;
+      }
+
+      .contact-paragraph a {
+        text-decoration: none;
+        color: #007bff;
+        font-weight: bold;
+      }
     </style>
   </head>
   <body>
     <h1>Get in Touch</h1>
+    <p class="contact-paragraph">
+      We value your questions, feedback, and inquiries. If you have any concerns
+      or need assistance, please don't hesitate to reach out. Our team is here
+      to provide you with the information and support you require. You can
+      contact us by phone, email, or by visiting our physical location. We look
+      forward to hearing from you and assisting with your healthcare needs. Your
+      health is our priority.
+    </p>
     <form method="post">
       {% csrf_token %} {{ form.as_p }}
       <button type="submit">Submit</button>

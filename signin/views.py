@@ -4,7 +4,7 @@ from .forms import Signup_form
 
 # Create your views here.
 
-def signup(request):
+def signup_function(request):
     if request.method == 'POST':
        form = Signup_form(request.POST)
        if form.is_valid():
@@ -13,9 +13,6 @@ def signup(request):
                 
     else:
         form = Signup_form()
-
-        
-
 
 
     return render(request, 'signup.html', {'form': form})
